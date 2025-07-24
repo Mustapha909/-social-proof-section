@@ -1,0 +1,125 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  width: 100%;
+  font: 'League Spartan', sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+.first-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  height: auto;
+}
+
+h1 {
+  color: #512051;
+  font-size: 56px;
+  width: 700px;
+  line-height: 85%;
+  letter-spacing: -2px;
+  width: 50%;
+}
+
+.description {
+  color: #927b91;
+  font-size: 19px;
+  line-height: 135%;
+  letter-spacing: -0.6px;
+  font-weight: 500;
+  width: 60%;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  width: 550;
+  height: 180px;
+}
+
+.stars-and-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #f7f2f7;
+  width: 450px;
+  height: 50px;
+  border-radius: 8px;
+}
+
+.first-review {
+  transform: translateX(-96px);
+}
+
+.middle-review {
+  transform: translateX(-48px);
+}
+
+.review-text {
+  color: #512051;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 100%;
+}
+
+.second-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  height: 300px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 350px;
+  height: 225px;
+  background-color: #512051;
+  padding: 16px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.middle-card {
+  transform: translateY(16px);
+}
+
+.last-card {
+  transform: translateY(32px);
+}
+
+.profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.profile-name {
+  font-size: 14px;
+  height: 5px;
+}
+
+.profile-verified {
+  color: #ee69a4;
+  height: 5px;
+}
