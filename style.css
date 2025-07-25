@@ -5,12 +5,38 @@ body {
   height: 95vh;
   width: 100%;
   font: 'League Spartan', sans-serif;
+  /* background-color: #f2f2f2; */
+}
+
+body::before {
+  content: '';
+  background-image: url('./images/bg-pattern-top-desktop.svg');
+  background-size: cover;
+  position: absolute;
+  top: -250px;
+  left: -600px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+body::after {
+  content: '';
+  background-image: url('./images/bg-pattern-bottom-desktop.svg');
+  background-size: cover;
+  position: absolute;
+  bottom: -100px;
+  right: -200px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .main {
   display: flex;
   flex-direction: column;
 }
+
 .first-section {
   display: flex;
   justify-content: space-between;
@@ -122,4 +148,134 @@ h1 {
 .profile-verified {
   color: #ee69a4;
   height: 5px;
+}
+/* Tablet & Mobile */
+@media (max-width: 1024px) {
+  body {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+    overflow-x: hidden;
+    height: 100vh;
+  }
+
+  body::before {
+    content: '';
+    top: -150px;
+    left: -500px;
+  }
+
+  body::after {
+    content: '';
+    bottom: -100px;
+    right: -100px;
+  }
+
+  .main {
+    align-items: center;
+    gap: 40px;
+    width: 60%;
+    height: 100%;
+  }
+
+  .first-section,
+  .second-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+  }
+
+  h1 {
+    width: 100%;
+    font-size: 36px;
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  .description {
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .reviews {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .stars-and-text {
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .first-review,
+  .middle-review {
+    transform: none;
+  }
+
+  .second-section {
+    gap: 24px;
+    height: auto;
+  }
+
+  .card {
+    width: auto;
+    padding: 20px;
+    height: auto;
+  }
+
+  .middle-card,
+  .last-card {
+    transform: none;
+  }
+
+  .profile {
+    justify-content: flex-start;
+  }
+}
+
+/* Mobile Only */
+@media (max-width: 600px) {
+  body::before {
+    background-image: url('./images/bg-pattern-top-mobile.svg');
+    top: -150px;
+    left: -100px;
+  }
+
+  body::after {
+    background-image: url('./images/bg-pattern-bottom-mobile.svg');
+    bottom: -50px;
+    right: -100px;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .review-text {
+    font-size: 15px;
+  }
+
+  .card {
+    font-size: 14px;
+    padding: 16px;
+  }
+
+  .profile-name,
+  .profile-verified {
+    font-size: 13px;
+  }
 }
